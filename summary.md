@@ -106,6 +106,29 @@ This small example shows how all OOP concepts work **together naturally**.
 
 ---
 
+## 🏦 Mini Project — Banking System
+
+A real-world OOP example with two account types:
+
+- **Account** is the parent class — holds private `#balance` and `#owner` (Encapsulation + Abstraction)
+- **SavingsAccount** and **CheckingAccount** both extend Account (Inheritance)
+- Both override `withdraw()` but each enforces different rules (Polymorphism):
+  - `SavingsAccount` blocks withdrawals that drop balance below $100
+  - `CheckingAccount` allows overdraft up to a set limit
+- `applyInterest()` is unique to SavingsAccount — child adds its own behavior on top of parent
+
+> Just like a real bank — you never touch the balance directly. You use deposit/withdraw methods. The balance stays protected.
+
+**OOP Pillars used:**
+| Pillar | Where |
+|---|---|
+| Encapsulation | `#balance` and `#owner` are private |
+| Abstraction | Users call `deposit()`/`withdraw()` — no idea how balance updates internally |
+| Inheritance | `SavingsAccount` and `CheckingAccount` reuse `Account` code |
+| Polymorphism | Both account types have `withdraw()` — different behavior |
+
+---
+
 ## 📋 Summary Table
 
 | Concept | Simple Meaning | Real-World Example |
