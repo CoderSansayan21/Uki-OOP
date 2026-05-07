@@ -10,6 +10,33 @@
 Create a class `Vehicle` with a property `brand` and a method `describe()` that returns `"I am a [brand]"`.
 Create a child class `Car` that extends `Vehicle` and adds a property `doors`.
 Create a `Car` object and call `describe()`.
+```js
+class Vehicle{
+    constructor(brand){
+        this.brand=brand;
+
+    }
+
+    describe(){
+        return "iam a:" + this.brand;
+    }
+
+}
+
+class Car extends Vehicle{
+    constructor(brand,door){
+       super(brand);
+        this.door=door;
+    }
+
+}
+
+const car1 = new Car ("honda",5)
+
+console.log(car1.describe());
+console.log(car1);
+}
+```
 
 ---
 
@@ -17,6 +44,24 @@ Create a `Car` object and call `describe()`.
 Create a class `Person` with properties `name` and `age`.
 Create a child class `Student` that extends `Person` and adds a property `grade`.
 Print the student's name, age, and grade.
+```js
+class Person{
+    constructor(name,age){
+        this.name=name;
+        this.age=age;
+    }
+}
+class Student extends Person{
+    constructor(name,age,grade){
+        super(name,age)
+        this.grade=grade;
+        
+    }
+}
+
+const stu1= new Student ("sayan",21,"grade10");
+console.log(stu1);
+```
 
 ---
 
@@ -24,6 +69,22 @@ Print the student's name, age, and grade.
 Create a class `Animal` with a method `eat()` that returns `"eating..."`.
 Create a child class `Dog` that extends `Animal` and adds a method `bark()` that returns `"woof!"`.
 Show that `Dog` can call both `eat()` and `bark()`.
+```js
+class Animal{
+    eat(){
+        return "eating";
+    }
+}
+
+class Dog extends Animal{
+    bark(){
+        return "woof!";
+    }
+}
+
+const dog1 = new Dog();
+console.log(dog1.eat(),dog1.bark());
+```
 
 ---
 
